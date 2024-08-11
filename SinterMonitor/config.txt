@@ -1,0 +1,7 @@
+[DEFAULT]
+plc_mac_address = 00-E0-4C-36-08-EA
+plc_ip_address = 192.168.0.142
+pc_ip_address = 192.168.0.200
+subnet_mask = 255.255.255.0
+ip_gateway = 192.168.0.1
+plc_mcprotocol_port = 1400
