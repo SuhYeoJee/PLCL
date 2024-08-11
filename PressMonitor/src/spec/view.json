@@ -1,0 +1,18 @@
+{
+    "view":
+    {
+        "widgets":
+        [
+            "main",
+            "main_text"
+        ],
+
+        "layouts":
+        [
+            "main"
+        ],
+        "dialogs":
+        [
+        ]
+    }
+}
