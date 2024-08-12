@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>775</height>
+    <width>1669</width>
+    <height>865</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -25,8 +25,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1201</width>
-      <height>561</height>
+      <width>1661</width>
+      <height>621</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -42,18 +42,18 @@
      <attribute name="title">
       <string>Tab 1</string>
      </attribute>
-     <widget class="QTableWidget" name="tableWidget_2">
+     <widget class="QTableWidget" name="PROGRAM_TABLE">
       <property name="geometry">
        <rect>
-        <x>560</x>
-        <y>100</y>
-        <width>631</width>
-        <height>431</height>
+        <x>570</x>
+        <y>90</y>
+        <width>1080</width>
+        <height>501</height>
        </rect>
       </property>
       <property name="maximumSize">
        <size>
-        <width>631</width>
+        <width>3000</width>
         <height>16777215</height>
        </size>
       </property>
@@ -61,10 +61,10 @@
        <number>24</number>
       </property>
       <property name="columnCount">
-       <number>10</number>
+       <number>9</number>
       </property>
       <attribute name="horizontalHeaderVisible">
-       <bool>false</bool>
+       <bool>true</bool>
       </attribute>
       <attribute name="horizontalHeaderCascadingSectionResizes">
        <bool>false</bool>
@@ -73,10 +73,10 @@
        <number>1</number>
       </attribute>
       <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>40</number>
+       <number>110</number>
       </attribute>
       <attribute name="horizontalHeaderHighlightSections">
-       <bool>false</bool>
+       <bool>true</bool>
       </attribute>
       <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
        <bool>false</bool>
@@ -94,10 +94,10 @@
        <number>1</number>
       </attribute>
       <attribute name="verticalHeaderDefaultSectionSize">
-       <number>20</number>
+       <number>25</number>
       </attribute>
       <attribute name="verticalHeaderHighlightSections">
-       <bool>false</bool>
+       <bool>true</bool>
       </attribute>
       <attribute name="verticalHeaderShowSortIndicator" stdset="0">
        <bool>false</bool>
@@ -138,35 +138,37 @@
       <column/>
       <column/>
       <column/>
-      <column/>
      </widget>
      <widget class="QGroupBox" name="groupBox">
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>10</y>
+        <y>20</y>
         <width>561</width>
-        <height>521</height>
+        <height>561</height>
        </rect>
       </property>
       <property name="title">
        <string>AUTOMATIC</string>
       </property>
-      <widget class="QLineEdit" name="lineEdit">
+      <widget class="QLineEdit" name="AUTOMATIC_SET_WORKCOUNT">
        <property name="geometry">
         <rect>
          <x>130</x>
-         <y>130</y>
+         <y>150</y>
          <width>71</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="text">
+        <string>AUTOMATIC_SET_WORKCOUNT</string>
        </property>
       </widget>
       <widget class="QLabel" name="label">
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>120</y>
+         <y>140</y>
          <width>101</width>
          <height>51</height>
         </rect>
@@ -182,8 +184,8 @@ COUNT</string>
       <widget class="QLabel" name="label_2">
        <property name="geometry">
         <rect>
-         <x>220</x>
-         <y>130</y>
+         <x>210</x>
+         <y>150</y>
          <width>41</width>
          <height>31</height>
         </rect>
@@ -192,21 +194,24 @@ COUNT</string>
         <string>pcs</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_2">
+      <widget class="QLineEdit" name="AUTOMATIC_SET_WORKSTEP">
        <property name="geometry">
         <rect>
          <x>130</x>
-         <y>180</y>
+         <y>200</y>
          <width>71</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="text">
+        <string>AUTOMATIC_SET_WORKSTEP</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_3">
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>170</y>
+         <y>190</y>
          <width>101</width>
          <height>51</height>
         </rect>
@@ -223,7 +228,7 @@ STEP</string>
        <property name="geometry">
         <rect>
          <x>210</x>
-         <y>230</y>
+         <y>250</y>
          <width>41</width>
          <height>31</height>
         </rect>
@@ -236,7 +241,7 @@ STEP</string>
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>220</y>
+         <y>240</y>
          <width>101</width>
          <height>51</height>
         </rect>
@@ -249,21 +254,24 @@ DIMENSION</string>
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_3">
+      <widget class="QLineEdit" name="AUTOMATIC_SET_LOWERDIMENSION">
        <property name="geometry">
         <rect>
          <x>130</x>
-         <y>230</y>
+         <y>250</y>
          <width>71</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="text">
+        <string>AUTOMATIC_SET_LOWERDIMENSION</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_6">
        <property name="geometry">
         <rect>
          <x>210</x>
-         <y>280</y>
+         <y>300</y>
          <width>41</width>
          <height>31</height>
         </rect>
@@ -276,7 +284,7 @@ DIMENSION</string>
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>270</y>
+         <y>290</y>
          <width>101</width>
          <height>51</height>
         </rect>
@@ -289,21 +297,24 @@ Prepressing PS</string>
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_4">
+      <widget class="QLineEdit" name="AUTOMATIC_SET_UPPERPREPRESSINGPS">
        <property name="geometry">
         <rect>
          <x>130</x>
-         <y>280</y>
+         <y>300</y>
          <width>71</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="text">
+        <string>AUTOMATIC_SET_UPPERPREPRESSINGPS</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_8">
        <property name="geometry">
         <rect>
          <x>210</x>
-         <y>330</y>
+         <y>350</y>
          <width>41</width>
          <height>31</height>
         </rect>
@@ -316,7 +327,7 @@ Prepressing PS</string>
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>320</y>
+         <y>340</y>
          <width>101</width>
          <height>51</height>
         </rect>
@@ -329,21 +340,24 @@ PRESSURE</string>
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_5">
+      <widget class="QLineEdit" name="AUTOMATIC_SET_FINALPRESSURE">
        <property name="geometry">
         <rect>
          <x>130</x>
-         <y>330</y>
+         <y>350</y>
          <width>71</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="text">
+        <string>AUTOMATIC_SET_FINALPRESSURE</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_10">
        <property name="geometry">
         <rect>
          <x>210</x>
-         <y>380</y>
+         <y>400</y>
          <width>31</width>
          <height>31</height>
         </rect>
@@ -356,7 +370,7 @@ PRESSURE</string>
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>370</y>
+         <y>390</y>
          <width>101</width>
          <height>51</height>
         </rect>
@@ -369,21 +383,24 @@ TIME</string>
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_6">
+      <widget class="QLineEdit" name="AUTOMATIC_SET_PRESSINGTIME">
        <property name="geometry">
         <rect>
          <x>130</x>
-         <y>380</y>
+         <y>400</y>
          <width>71</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="text">
+        <string>AUTOMATIC_SET_PRESSINGTIME</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_12">
        <property name="geometry">
         <rect>
          <x>210</x>
-         <y>430</y>
+         <y>450</y>
          <width>31</width>
          <height>31</height>
         </rect>
@@ -396,7 +413,7 @@ TIME</string>
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>420</y>
+         <y>440</y>
          <width>121</width>
          <height>51</height>
         </rect>
@@ -409,34 +426,37 @@ SIZE</string>
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_7">
+      <widget class="QLineEdit" name="AUTOMATIC_SET_PRESSINGSIZE">
        <property name="geometry">
         <rect>
          <x>130</x>
-         <y>430</y>
-         <width>71</width>
-         <height>31</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_8">
-       <property name="geometry">
-        <rect>
-         <x>130</x>
-         <y>480</y>
+         <y>450</y>
          <width>71</width>
          <height>31</height>
         </rect>
        </property>
        <property name="text">
-        <string/>
+        <string>AUTOMATIC_SET_PRESSINGSIZE</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="AUTOMATIC_SET_CYCLETIME">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>500</y>
+         <width>71</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>AUTOMATIC_SET_CYCLETIME</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_14">
        <property name="geometry">
         <rect>
          <x>210</x>
-         <y>480</y>
+         <y>500</y>
          <width>31</width>
          <height>31</height>
         </rect>
@@ -449,7 +469,7 @@ SIZE</string>
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>470</y>
+         <y>490</y>
          <width>101</width>
          <height>51</height>
         </rect>
@@ -461,84 +481,102 @@ SIZE</string>
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_9">
+      <widget class="QLineEdit" name="AUTOMATIC_ACTUAL_WORKSTEP">
        <property name="geometry">
         <rect>
          <x>260</x>
-         <y>180</y>
-         <width>71</width>
-         <height>31</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_10">
-       <property name="geometry">
-        <rect>
-         <x>260</x>
-         <y>330</y>
-         <width>71</width>
-         <height>31</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_11">
-       <property name="geometry">
-        <rect>
-         <x>260</x>
-         <y>130</y>
-         <width>71</width>
-         <height>31</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_12">
-       <property name="geometry">
-        <rect>
-         <x>260</x>
-         <y>280</y>
-         <width>71</width>
-         <height>31</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_13">
-       <property name="geometry">
-        <rect>
-         <x>260</x>
-         <y>430</y>
-         <width>71</width>
-         <height>31</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_14">
-       <property name="geometry">
-        <rect>
-         <x>260</x>
-         <y>480</y>
+         <y>200</y>
          <width>71</width>
          <height>31</height>
         </rect>
        </property>
        <property name="text">
-        <string/>
+        <string>AUTOMATIC_ACTUAL_WORKSTEP</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_16">
+      <widget class="QLineEdit" name="AUTOMATIC_ACTUAL_FINALPRESSURE">
        <property name="geometry">
         <rect>
          <x>260</x>
-         <y>230</y>
+         <y>350</y>
          <width>71</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="text">
+        <string>AUTOMATIC_ACTUAL_FINALPRESSURE</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="AUTOMATIC_ACTUAL_WORKCOUNT">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>150</y>
+         <width>71</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>AUTOMATIC_ACTUAL_WORKCOUNT</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="AUTOMATIC_ACTUAL_UPPERPREPRESSINGPS">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>300</y>
+         <width>71</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>AUTOMATIC_ACTUAL_UPPERPREPRESSINGPS</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="AUTOMATIC_ACTUAL_PRESSINGSIZE">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>450</y>
+         <width>71</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>AUTOMATIC_ACTUAL_PRESSINGSIZE</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="AUTOMATIC_ACTUAL_CYCLETIME">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>500</y>
+         <width>71</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>AUTOMATIC_ACTUAL_CYCLETIME</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="AUTOMATIC_ACTUAL_LOWERDIMENSION">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>250</y>
+         <width>71</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>AUTOMATIC_ACTUAL_LOWERDIMENSION</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_16">
        <property name="geometry">
         <rect>
          <x>130</x>
-         <y>100</y>
+         <y>120</y>
          <width>71</width>
          <height>31</height>
         </rect>
@@ -554,7 +592,7 @@ SIZE</string>
        <property name="geometry">
         <rect>
          <x>260</x>
-         <y>100</y>
+         <y>120</y>
          <width>71</width>
          <height>31</height>
         </rect>
@@ -566,24 +604,24 @@ SIZE</string>
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_18">
+      <widget class="QLineEdit" name="AUTOMATIC_ACTUAL_CYCLETIME2">
        <property name="geometry">
         <rect>
          <x>340</x>
-         <y>480</y>
+         <y>500</y>
          <width>71</width>
          <height>31</height>
         </rect>
        </property>
        <property name="text">
-        <string/>
+        <string>AUTOMATIC_ACTUAL_CYCLETIME2</string>
        </property>
       </widget>
       <widget class="QGroupBox" name="groupBox_2">
        <property name="geometry">
         <rect>
          <x>380</x>
-         <y>130</y>
+         <y>150</y>
          <width>171</width>
          <height>141</height>
         </rect>
@@ -607,7 +645,7 @@ SIZE</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_19">
+       <widget class="QLineEdit" name="AUTOMATIC_CAR_CAR">
         <property name="geometry">
          <rect>
           <x>90</x>
@@ -617,10 +655,10 @@ SIZE</string>
          </rect>
         </property>
         <property name="text">
-         <string/>
+         <string>AUTOMATIC_CAR_CAR</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_20">
+       <widget class="QLineEdit" name="AUTOMATIC_CAR_SELECTDIA">
         <property name="geometry">
          <rect>
           <x>90</x>
@@ -630,7 +668,7 @@ SIZE</string>
          </rect>
         </property>
         <property name="text">
-         <string/>
+         <string>AUTOMATIC_CAR_SELECTDIA</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_21">
@@ -667,7 +705,7 @@ off No</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_21">
+       <widget class="QLineEdit" name="AUTOMATIC_CAR_DIADROPOFFNO">
         <property name="geometry">
          <rect>
           <x>90</x>
@@ -677,7 +715,7 @@ off No</string>
          </rect>
         </property>
         <property name="text">
-         <string/>
+         <string>AUTOMATIC_CAR_DIADROPOFFNO</string>
         </property>
        </widget>
       </widget>
@@ -685,7 +723,7 @@ off No</string>
        <property name="geometry">
         <rect>
          <x>380</x>
-         <y>280</y>
+         <y>300</y>
          <width>171</width>
          <height>81</height>
         </rect>
@@ -709,7 +747,7 @@ off No</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_22">
+       <widget class="QLineEdit" name="AUTOMATIC_COUNT_OK">
         <property name="geometry">
          <rect>
           <x>90</x>
@@ -719,10 +757,10 @@ off No</string>
          </rect>
         </property>
         <property name="text">
-         <string/>
+         <string>AUTOMATIC_COUNT_OK</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_23">
+       <widget class="QLineEdit" name="AUTOMATIC_COUNT_NG">
         <property name="geometry">
          <rect>
           <x>90</x>
@@ -732,7 +770,7 @@ off No</string>
          </rect>
         </property>
         <property name="text">
-         <string/>
+         <string>AUTOMATIC_COUNT_NG</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_24">
@@ -756,7 +794,7 @@ off No</string>
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>20</y>
+         <y>30</y>
          <width>541</width>
          <height>71</height>
         </rect>
@@ -767,7 +805,7 @@ off No</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLineEdit" name="lineEdit_17">
+       <widget class="QLineEdit" name="AUTOMATIC_PRGNAME">
         <property name="geometry">
          <rect>
           <x>270</x>
@@ -775,6 +813,9 @@ off No</string>
           <width>261</width>
           <height>31</height>
          </rect>
+        </property>
+        <property name="text">
+         <string>AUTOMATIC_PRGNAME</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_19">
@@ -809,7 +850,7 @@ off No</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_15">
+       <widget class="QLineEdit" name="AUTOMATIC_PRGNO">
         <property name="geometry">
          <rect>
           <x>120</x>
@@ -818,13 +859,16 @@ off No</string>
           <height>31</height>
          </rect>
         </property>
+        <property name="text">
+         <string>AUTOMATIC_PRGNO</string>
+        </property>
        </widget>
       </widget>
       <widget class="QFrame" name="frame_2">
        <property name="geometry">
         <rect>
          <x>340</x>
-         <y>370</y>
+         <y>390</y>
          <width>101</width>
          <height>101</height>
         </rect>
@@ -851,7 +895,7 @@ off No</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_28">
+       <widget class="QLineEdit" name="AUTOMATIC_ERROR_MINUS">
         <property name="geometry">
          <rect>
           <x>30</x>
@@ -861,7 +905,7 @@ off No</string>
          </rect>
         </property>
         <property name="text">
-         <string/>
+         <string>AUTOMATIC_ERROR_MINUS</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_30">
@@ -896,7 +940,7 @@ off No</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_27">
+       <widget class="QLineEdit" name="AUTOMATIC_ERROR_PLUS">
         <property name="geometry">
          <rect>
           <x>30</x>
@@ -906,7 +950,7 @@ off No</string>
          </rect>
         </property>
         <property name="text">
-         <string/>
+         <string>AUTOMATIC_ERROR_PLUS</string>
         </property>
        </widget>
       </widget>
@@ -914,7 +958,7 @@ off No</string>
        <property name="geometry">
         <rect>
          <x>450</x>
-         <y>370</y>
+         <y>390</y>
          <width>101</width>
          <height>101</height>
         </rect>
@@ -973,7 +1017,7 @@ off No</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_24">
+       <widget class="QLineEdit" name="AUTOMATIC_SEGSIZE_2">
         <property name="geometry">
          <rect>
           <x>30</x>
@@ -983,10 +1027,10 @@ off No</string>
          </rect>
         </property>
         <property name="text">
-         <string/>
+         <string>AUTOMATIC_SEGSIZE_2</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_26">
+       <widget class="QLineEdit" name="AUTOMATIC_SEGSIZE_3">
         <property name="geometry">
          <rect>
           <x>30</x>
@@ -996,10 +1040,10 @@ off No</string>
          </rect>
         </property>
         <property name="text">
-         <string/>
+         <string>AUTOMATIC_SEGSIZE_3</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_25">
+       <widget class="QLineEdit" name="AUTOMATIC_SEGSIZE_1">
         <property name="geometry">
          <rect>
           <x>30</x>
@@ -1009,7 +1053,7 @@ off No</string>
          </rect>
         </property>
         <property name="text">
-         <string/>
+         <string>AUTOMATIC_SEGSIZE_1</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_26">
@@ -1061,7 +1105,7 @@ off No</string>
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_32">
+      <widget class="QLineEdit" name="PROGRAM_USESTEP">
        <property name="geometry">
         <rect>
          <x>120</x>
@@ -1069,6 +1113,9 @@ off No</string>
          <width>71</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="text">
+        <string>PROGRAM_USESTEP</string>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton">
@@ -1109,11 +1156,14 @@ off No</string>
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>560</y>
-      <width>1201</width>
-      <height>191</height>
+      <y>630</y>
+      <width>1661</width>
+      <height>192</height>
      </rect>
     </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>110</number>
+    </attribute>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -1121,7 +1171,7 @@ off No</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1200</width>
+     <width>1669</width>
      <height>22</height>
     </rect>
    </property>

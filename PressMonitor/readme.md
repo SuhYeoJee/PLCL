@@ -1,20 +1,11 @@
-# PLC MONITOR TEMPLATE
+# PressMonitor
 
 ## PLC 주소의 값을 화면에 표시하는 프로그램
 
 
-### LOG
-
-> v2.00
-- `QT Designer` 사용해서 `.ui` 파일로 화면 생성
-- `QThread`로 주기적 갱신
-- `state` 별 `dataset` 적용
-- `PLC_ADDR`의 `DATASET LINEEDIT`에 자동적용
+그래서 이제 뭐함
+1. 화면 미구현부분 만들고 값 표시 확인
+2. state별 갱신할 부분 확인
+3. plc 통신 모듈 작성
 
 
-***
-
-> v1.00
-- MVC 클래스 분리
-- `WindowBuilder`: 위젯, 레이아웃 생성기
-- `controller` 클래스에서 `ConfigParser`사용

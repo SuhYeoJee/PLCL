@@ -4,7 +4,8 @@
         "widgets":
         [
             "main",
-            "main_text"
+            "main_text",
+            "PROGRAM_TABLE"
         ],
 
         "layouts":

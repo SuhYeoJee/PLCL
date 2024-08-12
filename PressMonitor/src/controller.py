@@ -6,6 +6,7 @@ from src.model import Model
 from src.view import View    
 from src.module.pyqt_imports import *
 from src.module.exceptions import *
+from igzg.utils import *
 # ===========================================================================================
 class Worker(QThread):
     data_generated = pyqtSignal()
@@ -38,11 +39,18 @@ class Controller:
     def worker_tick(self):
         update_data = self.model.worker_tick()
         for k,v in update_data.items():
-            try: #line edit에 값 표시
-                self.view.findChild(QLineEdit, k, Qt.FindChildrenRecursively).setText(str(v))
-            except AttributeError as e:
-                ...
-                #print_error_box(e,k,v)
+            if 'PROGRAM_TABLE' in k: #테이블에 값 표시
+                self.view.set_text_PROGRAM_TABLE(k,v)
+            else:
+                try: #line edit에 값 표시
+                    lineedit = self.view.findChild(QLineEdit, k, Qt.FindChildrenRecursively)
+                    if lineedit:
+                        lineedit.setText(str(v))
+                    else: #해당 line edit 없음
+                        print(k)
+                except AttributeError as e:
+                    ...
+                    #print_error_box(e,k,v)
 
     # --------------------------
     @pyqtSlot()

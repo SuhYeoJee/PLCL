@@ -23,7 +23,7 @@ class test_wait(state_wait):
     def __init__(self):
         super().__init__()
         self.dataset = self.addrs["DATASET"]["TEST"]
-        self.key = "PRGNO"
+        self.key = "ALARM_SV1_ALARM"
 
     def _is_next(self,val)->bool:
         return True if val[-1] == '0' else False
@@ -32,7 +32,7 @@ class connect_wait(state_wait):
     def __init__(self):
         super().__init__()
         self.dataset = self.addrs["DATASET"]["CONNECT"]
-        self.key = "CONNECT"
+        self.key = "SYSTEM_ON"
 
     def _is_next(self,val)->bool:
         return True if val[-1] == '0' else False
@@ -41,7 +41,7 @@ class start_wait(state_wait):
     def __init__(self):
         super().__init__()
         self.dataset = self.addrs["DATASET"]["START"]
-        self.key = "ON"
+        self.key = "SYSTEM_RUN"
 
     def _is_next(self,val)->bool:
         return True if val[-1] == '0' else False
@@ -50,7 +50,7 @@ class exit_wait(state_wait):
     def __init__(self):
         super().__init__()
         self.dataset = self.addrs["DATASET"]["EXIT"]                
-        self.key = "ON"
+        self.key = "SYSTEM_ON"
 
     def _is_next(self,val)->bool:
         return True if val[-1] == '0' else False
