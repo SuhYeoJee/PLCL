@@ -36,7 +36,7 @@
      </sizepolicy>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -64,13 +64,13 @@
        <number>9</number>
       </property>
       <attribute name="horizontalHeaderVisible">
-       <bool>true</bool>
+       <bool>false</bool>
       </attribute>
       <attribute name="horizontalHeaderCascadingSectionResizes">
        <bool>false</bool>
       </attribute>
       <attribute name="horizontalHeaderMinimumSectionSize">
-       <number>1</number>
+       <number>110</number>
       </attribute>
       <attribute name="horizontalHeaderDefaultSectionSize">
        <number>110</number>
@@ -85,13 +85,13 @@
        <bool>false</bool>
       </attribute>
       <attribute name="verticalHeaderVisible">
-       <bool>true</bool>
+       <bool>false</bool>
       </attribute>
       <attribute name="verticalHeaderCascadingSectionResizes">
        <bool>false</bool>
       </attribute>
       <attribute name="verticalHeaderMinimumSectionSize">
-       <number>1</number>
+       <number>25</number>
       </attribute>
       <attribute name="verticalHeaderDefaultSectionSize">
        <number>25</number>
@@ -1079,7 +1079,7 @@ off No</string>
        <rect>
         <x>570</x>
         <y>10</y>
-        <width>611</width>
+        <width>1071</width>
         <height>71</height>
        </rect>
       </property>
@@ -1144,12 +1144,283 @@ off No</string>
         <string>Dia Jig ON</string>
        </property>
       </widget>
+      <widget class="QLineEdit" name="PROGRAM_LSTP">
+       <property name="geometry">
+        <rect>
+         <x>770</x>
+         <y>20</y>
+         <width>71</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>PROGRAM_LSTP</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_36">
+       <property name="geometry">
+        <rect>
+         <x>660</x>
+         <y>10</y>
+         <width>111</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>L-STP</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_37">
+       <property name="geometry">
+        <rect>
+         <x>870</x>
+         <y>10</y>
+         <width>111</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>EJH</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="PROGRAM_EJH">
+       <property name="geometry">
+        <rect>
+         <x>980</x>
+         <y>20</y>
+         <width>71</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>PROGRAM_EJH</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>20</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Free Press'g</string>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
       <string>Tab 2</string>
      </attribute>
+     <widget class="QFrame" name="frame_5">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>10</y>
+        <width>1071</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLineEdit" name="PROGRAM_LIST_PRG_SELECT">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>20</y>
+         <width>71</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>PROGRAM_USESTEP</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QTableWidget" name="PROGRAM_VIEW_TABLE">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>90</y>
+        <width>1080</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>3000</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="rowCount">
+       <number>24</number>
+      </property>
+      <property name="columnCount">
+       <number>9</number>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>110</number>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>110</number>
+      </attribute>
+      <attribute name="horizontalHeaderHighlightSections">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderMinimumSectionSize">
+       <number>25</number>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>25</number>
+      </attribute>
+      <attribute name="verticalHeaderHighlightSections">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+     </widget>
+     <widget class="QLabel" name="label_69">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>20</y>
+        <width>111</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Prog. Select</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="PROGRAM_LIST_TABLE">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>90</y>
+        <width>561</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>4</number>
+      </property>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>130</number>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>130</number>
+      </attribute>
+      <attribute name="verticalHeaderMinimumSectionSize">
+       <number>40</number>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>40</number>
+      </attribute>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+     </widget>
+     <widget class="QLabel" name="label_72">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>111</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PROGRAM LIST</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QTableWidget" name="tableWidget">

@@ -41,6 +41,10 @@ class Controller:
         for k,v in update_data.items():
             if 'PROGRAM_TABLE' in k: #테이블에 값 표시
                 self.view.set_text_PROGRAM_TABLE(k,v)
+            elif 'PROGRAM_LIST_TABLE' in k:
+                self.view.set_text_PROGRAM_LIST_TABLE(k,v)
+            elif 'PROGRAM_VIEW_TABLE' in k:
+                self.view.set_text_PROGRAM_VIEW_TABLE(k,v)
             else:
                 try: #line edit에 값 표시
                     lineedit = self.view.findChild(QLineEdit, k, Qt.FindChildrenRecursively)
