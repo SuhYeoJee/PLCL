@@ -529,7 +529,7 @@
         },
         "SYSTEM":{
             "SYSTEM_ON":"???",
-            "SYSTEM_RUN":"???"
+            "SYSTEM_RUN":"M120"
         }
     }
 }

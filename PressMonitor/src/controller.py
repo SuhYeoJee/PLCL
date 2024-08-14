@@ -1,6 +1,7 @@
 if __debug__:
     import sys
     sys.path.append(r"D:\Github\PLCL\PressMonitor")
+    sys.path.append(r"C:\Users\gun07\Desktop\PLCL\PressMonitor")
 # -------------------------------------------------------------------------------------------
 from src.model import Model
 from src.view import View    

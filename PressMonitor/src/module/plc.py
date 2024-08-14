@@ -1,6 +1,8 @@
 if __debug__:
     import sys
     sys.path.append(r"D:\Github\PLCL\PressMonitor")
+    sys.path.append(r"C:\Users\gun07\Desktop\PLCL\PressMonitor")
+
 # -------------------------------------------------------------------------------------------
 from random import randint
 import serial
@@ -113,3 +115,14 @@ class LS_plc():
     def get_plc_dataset(self,dataset:dict)->dict:
         return {k:self.get_plc_data(v) for k,v in dataset.items()}
         
+
+if __name__ == "__main__":
+    a = LS_plc()
+    cmd = a._get_read_cmd("DW5004",1) #AUTOMATIC_PRGNO
+    print("read [DW5004] CMD")
+    print(cmd) #b'\x0501RSS0106%DW5004\x04'
+    print("------------------")
+
+    a.connect()
+    res = a.get_plc_data("DW5004")
+    print(res)

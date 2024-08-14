@@ -5,6 +5,7 @@ result/
 capture/
 output/
 prg/
+ref/
 # ======================================
 .vs
 .vscode
