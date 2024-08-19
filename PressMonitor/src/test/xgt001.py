@@ -1,5 +1,3 @@
-import socket
-from igzg.utils import write_error
 
 def get_xgt_header(cmd_len:int):
     company_id = b"LSIS-XGT".ljust(10, b'\x00')
@@ -11,10 +9,13 @@ def get_xgt_header(cmd_len:int):
     net_pos = b'\x00'
 
     a = company_id + plc_info + cpu_info + source_of_frame + invoke_id + length + net_pos
+    # a = b''
+    # for x in [company_id + plc_info + cpu_info + source_of_frame + invoke_id + length + net_pos]:
+    #     a += x[::-1] #little endian
     bcc = f"{sum(a) % 256:02X}".encode('ascii')
     return a + bcc
 
-def get_xgt_cmd(block_type = "X", addrs="DW5004"):
+def get_xgt_cmd(block_type = "W", addrs=["DW5004"]):
     # single read
     op = b'\x00\x54'
     if block_type == 'X': data_type = b'\x00\x00\x00\x00' # BIT
@@ -37,47 +38,18 @@ def get_xgt_cmd(block_type = "X", addrs="DW5004"):
         a += (addr_length + addr.encode('ascii')[::-1])
     return a
 
-
 def t(block_type = "W", addrs=['%DW5004']):
     cmd = get_xgt_cmd(block_type,addrs)
     header = get_xgt_header(len(cmd))
     return (header + cmd)
 
-
-# 서버의 IP 주소와 포트 설정
-SERVER_IP = '192.168.0.50'  # 서버 IP 주소
-SERVER_PORT = 2004  # 서버 포트 (적절한 포트로 변경)
-
-# TCP/IP 소켓 생성
-client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client_socket.settimeout(10)
-
-try:
-    # 서버에 연결
-    client_socket.connect((SERVER_IP, SERVER_PORT))
-    print("Start")
-    print(f"Connected to {SERVER_IP}:{SERVER_PORT}")
-    print('------------------------------------------')
-
-    # DW5004 주소에 대한 데이터 송신
-    message_dw5004 = t()
-    print(message_dw5004)
-    client_socket.sendall(message_dw5004)
-    response_dw5004 = client_socket.recv(1024)  # 적절한 버퍼 크기 설정
-    print("AUTOMATIC_PRGNO: ", response_dw5004.decode('utf-8'))
-    print('------------------------------------------')
-
-    # DW2090 주소에 대한 데이터 송신
-    message_dw2090 = t('W',['%DW2090'])
-    print(message_dw2090)
-    client_socket.sendall(message_dw2090)
-    response_dw2090 = client_socket.recv(1024)  # 적절한 버퍼 크기 설정
-    print("AUTOMATIC_PRGNAME: ", response_dw2090.decode('utf-8'))
-    print('------------------------------------------')
-
-except Exception as e:
-    write_error(e,console_logging=True)
-
-finally:
-    # 소켓 종료
-    client_socket.close()
+###############################################
+# print(get_xgt_cmd())
+b'\x01\x00\x00\x00\x02\x00T\x00\x06\x004005WD'
+b'\x00T\x00\x02\x00\x00\x00\x01\x00\x07%DW5004'
+# print(get_xgt_header(10))
+b'LSIS-XGT\x00\x00\x00\x00\xa03\x00\x10\x00\x11\x004F'
+print(t())
+b'LSIS-XGT\x00\x00\x00\x00\xa03\x00\x10\x00\x11\x004F\x00T\x00\x02\x00\x00\x00\x01\x00\x07%DW5004'
+b'LSIS-XGT\x00\x00\x00\x00\xa03\x00\x10\x00\x11\x004F\x01\x00\x00\x00\x02\x00T\x00\x07\x004005WD%'
+###############################################
