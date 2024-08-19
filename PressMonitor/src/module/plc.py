@@ -2,7 +2,6 @@ if __debug__:
     import sys
     sys.path.append(r"D:\Github\PLCL\PressMonitor")
     sys.path.append(r"C:\Users\gun07\Desktop\PLCL\PressMonitor")
-
 # -------------------------------------------------------------------------------------------
 from random import randint
 import serial

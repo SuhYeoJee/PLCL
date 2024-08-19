@@ -2,7 +2,6 @@ if __debug__:
     import sys
     sys.path.append(r"D:\Github\PLCL\PressMonitor")
     sys.path.append(r"C:\Users\gun07\Desktop\PLCL\PressMonitor")
-
 # -------------------------------------------------------------------------------------------
 from src.module.plc import test_plc
 from src.module.wait import test_wait, connect_wait, start_wait, exit_wait
