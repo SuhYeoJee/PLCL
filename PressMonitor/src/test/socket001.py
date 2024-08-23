@@ -8,13 +8,15 @@ def get_xgt_header(cmd_len:int):
     source_of_frame = b'\x33' # client -> server
     invoke_id = b'\x00\x10'
     length = cmd_len.to_bytes(2,'big')
-    net_pos = b'\x00'
+    # net_pos = b'\x00'
 
-    a = company_id + plc_info + cpu_info + source_of_frame + invoke_id + length + net_pos
-    bcc = f"{sum(a) % 256:02X}".encode('ascii')
-    return a + bcc
+    a = company_id + plc_info + cpu_info + source_of_frame + invoke_id + length # + net_pos
+    bcc = (sum(a) & 0xFF).to_bytes(1, 'big')
 
-def get_xgt_cmd(block_type = "X", addrs="DW5004"):
+    header = a + bcc
+    return header
+
+def get_xgt_cmd(block_type = "W", addrs=["DW5004"]):
     # single read
     op = b'\x00\x54'
     if block_type == 'X': data_type = b'\x00\x00\x00\x00' # BIT
@@ -25,18 +27,10 @@ def get_xgt_cmd(block_type = "X", addrs="DW5004"):
     block_length = len(addrs).to_bytes(2,'big')
     cmd = op + data_type + block_length
     for addr in addrs:
-        addr_length = len(addr).to_bytes(2,'big')
-        cmd += (addr_length + addr.encode('ascii'))
-    # return cmd
+        addr_length = len(addr).to_bytes(2,'big') 
+        cmd += (addr_length + b'\x00' + addr.encode('ascii'))
 
-    a = b''
-    for x in [op + data_type + block_length]:
-        a += x[::-1] #little endian
-    for addr in addrs:
-        addr_length = len(addr).to_bytes(2,'little')
-        a += (addr_length + addr.encode('ascii')[::-1])
-    return a
-
+    return cmd
 
 def t(block_type = "W", addrs=['%DW5004']):
     cmd = get_xgt_cmd(block_type,addrs)

@@ -1,0 +1,18 @@
+2024-08-23 17:57:23
+    [timeout] - None
+    function: <module>(('timed out',))
+    traceback: Traceback (most recent call last):
+  File "D:\Github\PLCL\PressMonitor\src\test\socket001.py", line 66, in <module>
+    response_dw5004 = client_socket.recv(1024)  # 적절한 버퍼 크기 설정
+socket.timeout: timed out
+
+    
+2024-08-23 17:58:04
+    [timeout] - None
+    function: <module>(('timed out',))
+    traceback: Traceback (most recent call last):
+  File "D:\Github\PLCL\PressMonitor\src\test\socket001.py", line 60, in <module>
+    response_dw5004 = client_socket.recv(1024)  # 적절한 버퍼 크기 설정
+socket.timeout: timed out
+
+    
